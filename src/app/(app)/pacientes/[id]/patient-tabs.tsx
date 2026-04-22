@@ -1,7 +1,7 @@
 "use client";
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Odontogram } from "@/components/odontogram";
+import { Odontogram } from "../../../../components/odontogram";
 import {
   FileText, Image as ImageIcon, StickyNote, Bell, Clock, Activity,
   Upload, Trash2, Check, Plus,

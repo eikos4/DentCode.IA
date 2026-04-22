@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, Phone, Mail, Calendar, User, FileText, Stethoscope, Loader2, Grid3X3, Box } from "lucide-react";
-import { Odontogram3D } from "@/components/odontogram-3d";
-import { Jaw3D } from "@/components/jaw-3d";
+import { Odontogram3D } from "../../../../components/odontogram-3d";
+import { Jaw3D } from "../../../../components/jaw-3d";
 
 interface Patient {
   id: string;
