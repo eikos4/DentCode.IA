@@ -179,7 +179,9 @@ export default async function DashboardPage() {
   ].sort((a, b) => b.at.getTime() - a.at.getTime()).slice(0, 6);
 
   /* ---------- render ---------- */
-  const firstName = dentist?.fullName.split(" ")[1] ?? dentist?.fullName ?? "Doctor/a";
+  // Manejar tanto dentistas (con fullName) como roles de clínica (con name)
+  const displayName = (dentist as any)?.fullName ?? (dentist as any)?.name ?? "Usuario";
+  const firstName = displayName.split(" ")[1] ?? displayName;
   const todayLabel = new Intl.DateTimeFormat("es-CL", {
     weekday: "long", day: "numeric", month: "long",
   }).format(now);
