@@ -51,7 +51,7 @@ export function SearchFilters() {
     priceRange: "",
     emergency: false,
     insurance: false,
-    rating: "",
+    rating: 0,
   });
 
   const updateFilter = (key: string, value: any) => {
@@ -67,7 +67,7 @@ export function SearchFilters() {
       priceRange: "",
       emergency: false,
       insurance: false,
-      rating: "",
+      rating: 0,
     });
   };
 
@@ -206,7 +206,7 @@ export function SearchFilters() {
               {[5, 4, 3, 2, 1].map(rating => (
                 <button
                   key={rating}
-                  onClick={() => updateFilter("rating", filters.rating === rating ? "" : rating)}
+                  onClick={() => updateFilter("rating", filters.rating === rating ? 0 : rating)}
                   className={`px-3 py-1 rounded text-sm border transition ${
                     filters.rating === rating
                       ? "bg-blue-100 border-blue-300 text-blue-700"
